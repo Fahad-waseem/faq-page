@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Faq Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+body{
+background-color: blueviolet;
+font-family: monospace,sans-serif;
+}
+.faq{
+padding: 50px;
+
+}
+.faq h1{
+color: white;
+text-align: center;
+font-size: 50px;
+margin-bottom: 50px;
+
+}
+.question-container{
+max-width: 500px;
+margin: 0 auto;
+
+} 
+.question button{
+width: 100%;
+background-color: teal;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15PX;
+border: none; outline: none;
+font-size: 15px;
+color: yellow;
+font-weight: 700;
+cursor: pointer;
+border-bottom: 1px solid purple;
+}
+.question button i{
+  transform: rotate(180deg);
+}
+.question p{
+  background-color: aqua;
+font-size: 14px;
+line-height: 1.6;
+/* overflow: hidden;
+max-height: 0; */
+opacity: 0;
+}
+.question p.show{
+  max-height: 200px ;opacity:1;
+padding: 30px;
+
+}
+
+</style>
+<body>
+<section class="faq">
+<h1 class="section-heading">
+  FAQ
+</h1>
+<div class="question-container">
+<div class="question">
+<button>
+  <span>QUESTION 1</span>
+  <i class="fas fa-chevron-up"></i>
+</button>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque perferendis commodi temporibus nihil aspernatur alias voluptatibus. Fuga consectetur neque totam soluta? .</p>
+</div>
+<div class="question">
+<button>
+
+  <span>QUESTION 2</span>
+  <i class="fas fa-chevron-up"></i>
+</button>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque perferendis commodi temporibus nihil aspernatur alias voluptatibus. Fuga consectetur neque totam soluta? Maiores odit soluta saepe ex modi laborum veniam at.</p>
+</div>
+<div class="question">
+<button>
+  <span>QUESTION 3</span>
+  <i class="fas fa-chevron-up"></i>
+</button>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Fuga consectetur neque totam soluta? Maiores odit soluta saepe ex modi laborum veniam at.</p>
+</div>
+<div class="question">
+<button>
+  <span>QUESTION 4</span>
+  <i class="fas fa-chevron-up"></i>
+</button>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.t.</p>
+</div>
+
+</div>
+
+
+</section>
+  <script>
+  const buttons =document.querySelectorAll('button');
+  
+  
+  
+  buttons.forEach(button =>{
+button.addEventListener( 'click',()=>{
+  const para = button.nextElementSibling;
+  const icon = button.children('1');
+
+
+  para.classList.toggle('show');
+  icon.classList.toggle('rotate');
+
+
+})
+  })
+  
+  
+
+
+
+// const buttons = document.querySelectorAll(".faq");
+// faq.forEach((faq) =>{
+
+//   faq.addEventListner("click" , () =>{
+//   faq.classlist.toggle("active");
+// });
+
+
+// });
+
+
+
+
+  </script>
+
+</body>
+</html>
